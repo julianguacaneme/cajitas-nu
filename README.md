@@ -23,5 +23,5 @@
 ## 📢 Autor
 **Julián Guacaneme**  
 - GitHub: [julianguacaneme](https://github.com/julianguacaneme)  
-- LinkedIn: *(Si tienes, puedes agregarlo aquí)*  
+- LinkedIn:(https://www.linkedin.com/in/julian-guacaneme-4b862940/)
 
