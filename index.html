@@ -3,40 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Reparto</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Cajitas NU</title>
+    <link rel="stylesheet" href="css/styles.css">
 
 </head>
 <body>
 
     <h2>Cajitas NU</h2>
+    <p>Esta aplicación te ayuda a dividir un monto en tres categorías: gastos, fondo de emergencia e inversión/pago de deudas, según los porcentajes predefinidos.</p>
     <label for="monto">Ingrese el monto:</label>
     <input type="number" id="monto" placeholder="Ingrese un monto">
-    <button onclick="calcular()">Calcular</button>
+    <button>Calcular</button>
 
-    <div class="resultado">
+    <div class="resultado" role="region" aria-live="polite">
+ <div id="error-message" style="color: red;" role="alert" aria-live="assertive"></div>
+
         <p>📌 <strong>Gastos (75%):</strong> <span id="gastos"></span></p>
         <p>📌 <strong>Fondo de emergencia (15%):</strong> <span id="fondo"></span></p>
         <p>📌 <strong>Inversión / Pago de deudas (10%):</strong> <span id="inversion"></span></p>
     </div>
-
-    <script>
-        function calcular() {
-            let monto = parseFloat(document.getElementById("monto").value);
-            if (isNaN(monto) || monto <= 0) {
-                alert("Ingrese un monto válido.");
-                return;
-            }
-
-            let gastos = monto * 0.75;
-            let fondo = monto * 0.15;
-            let inversion = monto * 0.10;
-
-            document.getElementById("gastos").innerText = `$${gastos.toLocaleString()}`;
-            document.getElementById("fondo").innerText = `$${fondo.toLocaleString()}`;
-            document.getElementById("inversion").innerText = `$${inversion.toLocaleString()}`;
-        }
-    </script>
 
 </body>
 <footer>
